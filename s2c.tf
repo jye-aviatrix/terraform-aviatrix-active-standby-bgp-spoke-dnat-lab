@@ -211,6 +211,6 @@ resource "aviatrix_transit_external_device_conn" "ec1transit-to-uw1landing1-ha" 
   local_tunnel_cidr = "169.254.100.5/30,${split(",",aviatrix_spoke_external_device_conn.uw1landing1-to-ec1transit-ha.remote_tunnel_cidr)[1]}"
   remote_tunnel_cidr = "169.254.100.6/30,${split(",",aviatrix_spoke_external_device_conn.uw1landing1-to-ec1transit-ha.local_tunnel_cidr)[1]}"
   ha_enabled = false
-#   prepend_as_path = [module.ec1transit.transit_gateway.local_as_number,module.ec1transit.transit_gateway.local_as_number,module.ec1transit.transit_gateway.local_as_number]
+  # prepend_as_path = [module.ec1transit.transit_gateway.local_as_number,module.ec1transit.transit_gateway.local_as_number,module.ec1transit.transit_gateway.local_as_number]
     # Prepend may not be necessory, appears that our spoke take care of it using Active/Standby flag.
 }

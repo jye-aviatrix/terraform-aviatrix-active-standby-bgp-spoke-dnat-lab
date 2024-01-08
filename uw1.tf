@@ -14,7 +14,7 @@ module "uw1transit" {
 
 module "uw1spoke1" {
   source   = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version  = "1.6.5"
+  version  = "1.6.7"
   cloud    = "AWS"
   region   = "us-west-1"
   cidr     = "10.16.100.0/24"
@@ -30,7 +30,7 @@ module "uw1spoke1" {
 
 module "uw1landing1" {
   source   = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version  = "1.6.5"
+  version  = "1.6.7"
   cloud    = "AWS"
   region   = "us-west-1"
   cidr     = "10.16.101.0/24"
@@ -45,7 +45,7 @@ module "uw1landing1" {
   enable_bgp = true
   local_as_number = 65101
   enable_active_standby = true  # Enable Active/Standy external connection on BGP active mesh 2.0 spoke
-  # enable_active_standby_preemptive = true
+  enable_active_standby_preemptive = true
   bgp_hold_time = 60
   bgp_polling_time = 20
 }

@@ -17,7 +17,7 @@ module "ec1transit" {
 
 module "ec1spoke1" {
   source                 = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version                = "1.6.5"
+  version                = "1.6.7"
   cloud                  = "AWS"
   region                 = "eu-central-1"
   cidr                   = "10.32.100.0/24"
